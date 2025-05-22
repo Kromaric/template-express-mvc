@@ -33,8 +33,10 @@ cd template-express-mvc
 # Installe les dépendances
 npm install
 
-# Crée un fichier .env si besoin
-cp .env.example .env
+# Créer la base de données
+npx sequelize-cli db:create
+Appliquer les migrations
+npx sequelize-cli db:migrate
 
 # Lancer le projet
 npm start
